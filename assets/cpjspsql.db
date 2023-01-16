@@ -1,0 +1,208 @@
+CREATE TABLE [Nature] (
+[n_nature] inTEGER  NULL PRIMARY KEY,
+[libelle_nature] teXT  NULL,
+[n_typedocument] intEGER  NULL
+);
+CREATE TABLE [article] (
+[n_article] inTEGER  PRIMARY KEY NULL,
+[text_article] teXT  NULL,
+[id_nature] inTEGER  NULL
+);
+CREATE TABLE [piece] (
+[n_piece] inTEGER  NULL PRIMARY KEY,
+[piece] teXT  NULL,
+[n_soustitre] iNTEGER  NULL
+);
+CREATE TABLE [service] (
+[n_service] INTEGER  NOT NULL PRIMARY KEY,
+[nom_service] TEXT  NOT NULL,
+[telephone] TEXT  NULL,
+[type] integer  NULL
+);
+CREATE TABLE [sous_titre] (
+[n_soustitre] inTEGER  NULL PRIMARY KEY,
+[sous_titre] teXT  NULL,
+[n_titre] inTEGER  NULL
+);
+CREATE TABLE [titre] (
+[n_titre] inTEGER  PRIMARY KEY NULL,
+[titre] teXT  NULL,
+[n_typepiece] inteGER  NULL,
+[n_nature] inTEGER  NULL
+);
+CREATE TABLE [typedocument] (
+[n_typedocument] iNTEGER  NULL PRIMARY KEY,
+[activite] teXT  NULL
+);
+CREATE TABLE [typepiece] (
+[n_typepiece] inTEGER  PRIMARY KEY NULL,
+[type_piece] teXT  NULL
+);
+INSERT INTO "Nature" ( "n_nature","libelle_nature","n_typedocument" ) VALUES ( '1','Nomination HEE non fonctionnaire
+permanent','1' );
+INSERT INTO "Nature" ( "n_nature","libelle_nature","n_typedocument" ) VALUES ( '2','Nomination d''un fonctionnaire','1' );
+INSERT INTO "Nature" ( "n_nature","libelle_nature","n_typedocument" ) VALUES ( '3','Recrutement d''un EFA','1' );
+INSERT INTO "Nature" ( "n_nature","libelle_nature","n_typedocument" ) VALUES ( '4','Recrutement d''un ELD','1' );
+INSERT INTO "Nature" ( "n_nature","libelle_nature","n_typedocument" ) VALUES ( '5','Nomination HEE fonctionnaire permanent','1' );
+INSERT INTO "Nature" ( "n_nature","libelle_nature","n_typedocument" ) VALUES ( '6','Nomination HEE fonctionnaire non permanent','1' );
+INSERT INTO "Nature" ( "n_nature","libelle_nature","n_typedocument" ) VALUES ( '7','Integration','1' );
+INSERT INTO "Nature" ( "n_nature","libelle_nature","n_typedocument" ) VALUES ( '8','Titularisation','1' );
+INSERT INTO "Nature" ( "n_nature","libelle_nature","n_typedocument" ) VALUES ( '9','Avacement de classe','1' );
+INSERT INTO "Nature" ( "n_nature","libelle_nature","n_typedocument" ) VALUES ( '10','Avancement d''echelon','1' );
+INSERT INTO "Nature" ( "n_nature","libelle_nature","n_typedocument" ) VALUES ( '11','Reclassement indiciaire','1' );
+INSERT INTO "Nature" ( "n_nature","libelle_nature","n_typedocument" ) VALUES ( '12','Majoration indiciaire','1' );
+INSERT INTO "Nature" ( "n_nature","libelle_nature","n_typedocument" ) VALUES ( '13','Cong�s annuels cumul�s','1' );
+INSERT INTO "Nature" ( "n_nature","libelle_nature","n_typedocument" ) VALUES ( '14','Cong� de maladie','1' );
+INSERT INTO "Nature" ( "n_nature","libelle_nature","n_typedocument" ) VALUES ( '15','Cong� de longue dur�e','1' );
+INSERT INTO "Nature" ( "n_nature","libelle_nature","n_typedocument" ) VALUES ( '16','Cong� de cure thermale','1' );
+INSERT INTO "Nature" ( "n_nature","libelle_nature","n_typedocument" ) VALUES ( '17','Cong� de maternit�','1' );
+INSERT INTO "Nature" ( "n_nature","libelle_nature","n_typedocument" ) VALUES ( '18','Cong� pour formation','1' );
+INSERT INTO "Nature" ( "n_nature","libelle_nature","n_typedocument" ) VALUES ( '19','Reclassement d''un fonctionnaire','1' );
+INSERT INTO "Nature" ( "n_nature","libelle_nature","n_typedocument" ) VALUES ( '20','Avenant (EFA)','1' );
+INSERT INTO "Nature" ( "n_nature","libelle_nature","n_typedocument" ) VALUES ( '21','Ajoration d''indice d''un ELD','1' );
+INSERT INTO "article" ( "n_article","text_article","id_nature" ) VALUES ( '1','Ordonnance n� 93-027 relative � la
+r�glementation sur les hauts emplois
+de l�Etat du 13 Mai 1993','1' );
+INSERT INTO "article" ( "n_article","text_article","id_nature" ) VALUES ( '2','Loi n� 2003-011 portant statut
+g�n�ral des fonctionnaires Titre 3 et
+Titre 6 ','2' );
+INSERT INTO "article" ( "n_article","text_article","id_nature" ) VALUES ( '3','Loi 94-025 portant Statut G�n�ral des
+Agents non Encadr�s du 11 Octobre
+1994 Titre VII','3' );
+INSERT INTO "article" ( "n_article","text_article","id_nature" ) VALUES ( '4','Loi 94-025 portant Statut G�n�ral des
+Agents non Encadr�s du 11 Octobre
+1994 Titre VII
+','4' );
+INSERT INTO "article" ( "n_article","text_article","id_nature" ) VALUES ( '5','D�cret n� 85-343 du 16/11/1985
+modifiant le D�cret n� 85-260 du
+19/08/85 fixant les avantages en
+nature des HEE','5' );
+INSERT INTO "article" ( "n_article","text_article","id_nature" ) VALUES ( '6','D�cret n� 85-343 du 16/11/1985
+modifiant le -D�cret n� 85-260 du
+19/08/85 fixant les avantages en
+nature des HEE','6' );
+INSERT INTO "article" ( "n_article","text_article","id_nature" ) VALUES ( '7','Circulaire suite INTEGRATION
+n�5332/minfop/mefb du 05/11/2003 ;
+- Art 18-18 SGF du 03 septembre
+2003','7' );
+INSERT INTO "article" ( "n_article","text_article","id_nature" ) VALUES ( '8','Loi n� 2003-011 portant statut
+g�n�ral des fonctionnaires, Article 22
+et 23','8' );
+INSERT INTO "article" ( "n_article","text_article","id_nature" ) VALUES ( '9','Loi n� 2003-011 portant statut
+g�n�ral des fonctionnaires Titre VII
+Chapitre 2','9' );
+INSERT INTO "article" ( "n_article","text_article","id_nature" ) VALUES ( '10','Loi n� 2003-011 portant statut
+g�n�ral des fonctionnaires Titre VII
+Chapitre 2','10' );
+INSERT INTO "article" ( "n_article","text_article","id_nature" ) VALUES ( '11','D�cret n�2005/134 du 15 mars 2005','11' );
+INSERT INTO "article" ( "n_article","text_article","id_nature" ) VALUES ( '12','D�cret n�2005/134 du 15 mars 2005','12' );
+INSERT INTO "article" ( "n_article","text_article","id_nature" ) VALUES ( '13','D�cret n�2004/812 du 24 ao�t 2004','13' );
+INSERT INTO "article" ( "n_article","text_article","id_nature" ) VALUES ( '14','D�cret n�2004/812 du 24 ao�t 2004','14' );
+INSERT INTO "article" ( "n_article","text_article","id_nature" ) VALUES ( '15','D�cret n�2004/812 du 24 ao�t 2004','15' );
+INSERT INTO "article" ( "n_article","text_article","id_nature" ) VALUES ( '16','D�cret n�2004/812 du 24 ao�t 2004','16' );
+INSERT INTO "article" ( "n_article","text_article","id_nature" ) VALUES ( '17','D�cret n�2004/812 du 24 ao�t 2004','17' );
+INSERT INTO "article" ( "n_article","text_article","id_nature" ) VALUES ( '18','D�cret n�2004/812 du 24 ao�t 2004','18' );
+INSERT INTO "article" ( "n_article","text_article","id_nature" ) VALUES ( '19','D�cret n� 96-752 du 27 aout 1996
+fixant les conditions et modalit�s des
+fonctionnaires dans le corps des
+fonctionnaires correspondant � leur
+dipl�me','19' );
+INSERT INTO "article" ( "n_article","text_article","id_nature" ) VALUES ( '20','Loi 94-025 du 17 novembre 1994
+Titre IV article 18 portant Statut
+General des Agents non Encadr�s','20' );
+INSERT INTO "article" ( "n_article","text_article","id_nature" ) VALUES ( '21','Loi 94-025 du 17 novembre1994
+Titre IV article 18 portant Statut
+General des Agents non Encadr�s ','21' );
+INSERT INTO "piece" ( "n_piece","piece","n_soustitre" ) VALUES ( '1','Visa seulement pour les nominations par arr�t�','1' );
+INSERT INTO "piece" ( "n_piece","piece","n_soustitre" ) VALUES ( '2','Projet d�arr�t� de nomination','1' );
+INSERT INTO "piece" ( "n_piece","piece","n_soustitre" ) VALUES ( '3','Organigramme pour les postes nouveaux ou dissouts','1' );
+INSERT INTO "piece" ( "n_piece","piece","n_soustitre" ) VALUES ( '4','Certificat d�immatriculation le cas �ch�ant','2' );
+INSERT INTO "piece" ( "n_piece","piece","n_soustitre" ) VALUES ( '5','D�cret ou Arr�t� de nomination','2' );
+INSERT INTO "piece" ( "n_piece","piece","n_soustitre" ) VALUES ( '6','CIN','2' );
+INSERT INTO "piece" ( "n_piece","piece","n_soustitre" ) VALUES ( '7','RIB','2' );
+INSERT INTO "piece" ( "n_piece","piece","n_soustitre" ) VALUES ( '8','Demande dument sign�e et rev�tue de l�avis des autorit�s comp�tentes','3' );
+INSERT INTO "piece" ( "n_piece","piece","n_soustitre" ) VALUES ( '9','Copie acte de naissance','3' );
+INSERT INTO "piece" ( "n_piece","piece","n_soustitre" ) VALUES ( '10','Casier judiciaire (bulletin n�3) d�au moins de trois mois','3' );
+INSERT INTO "piece" ( "n_piece","piece","n_soustitre" ) VALUES ( '11','Certificat de position militaire pour les candidats du sexe masculin','3' );
+INSERT INTO "piece" ( "n_piece","piece","n_soustitre" ) VALUES ( '12','Dipl�me ou titre requis pour l�emploi et, le cas �ch�ant, arr�t� portant
+�quivalence administrative du titre en question si ledit titre n�est pas pr�vu par
+le D�cret portant classification hi�rarchique des fonctionnaires','3' );
+INSERT INTO "piece" ( "n_piece","piece","n_soustitre" ) VALUES ( '13','Certificat m�dicaux d�aptitude','3' );
+INSERT INTO "piece" ( "n_piece","piece","n_soustitre" ) VALUES ( '14','Pi�ces officielle �manant du Minist�re charg� du budget et accordant le poste
+budg�taire d�accueil envisag�','4' );
+INSERT INTO "piece" ( "n_piece","piece","n_soustitre" ) VALUES ( '15','Situation des effectifs statuaires du corps d�accueil','4' );
+INSERT INTO "piece" ( "n_piece","piece","n_soustitre" ) VALUES ( '16','Copie certifi�e de l�arr�t� portant ouverture du concours ','5' );
+INSERT INTO "piece" ( "n_piece","piece","n_soustitre" ) VALUES ( '17','Liste certifi�e des candidats d�clar�s d�finitivement admis au concours','5' );
+INSERT INTO "piece" ( "n_piece","piece","n_soustitre" ) VALUES ( '18','Liste officielle des candidats admis � l�issue de la formation','5' );
+INSERT INTO "piece" ( "n_piece","piece","n_soustitre" ) VALUES ( '19','D�cret ou Arr�t� de nomination','6' );
+INSERT INTO "piece" ( "n_piece","piece","n_soustitre" ) VALUES ( '20','D�cision d�affectation','6' );
+INSERT INTO "piece" ( "n_piece","piece","n_soustitre" ) VALUES ( '21','Attestation de prise de service','6' );
+INSERT INTO "service" ( "n_service","nom_service","telephone","type" ) VALUES ( '1','ANALANJIROFO','0345990587','1' );
+INSERT INTO "service" ( "n_service","nom_service","telephone","type" ) VALUES ( '2','ANOSY','0345991350','1' );
+INSERT INTO "service" ( "n_service","nom_service","telephone","type" ) VALUES ( '3','BOENY','0345991449','1' );
+INSERT INTO "service" ( "n_service","nom_service","telephone","type" ) VALUES ( '4','AMORON''I MANIA','0345991874','1' );
+INSERT INTO "service" ( "n_service","nom_service","telephone","type" ) VALUES ( '5','BETSIBOKA','0345991952','1' );
+INSERT INTO "service" ( "n_service","nom_service","telephone","type" ) VALUES ( '6','MENABE','0345992334','1' );
+INSERT INTO "service" ( "n_service","nom_service","telephone","type" ) VALUES ( '7','ITASY','0345992590','1' );
+INSERT INTO "service" ( "n_service","nom_service","telephone","type" ) VALUES ( '8','ATSIMO ATSINANANA','0345992878','1' );
+INSERT INTO "service" ( "n_service","nom_service","telephone","type" ) VALUES ( '9','IHOROMBE','0345992980','1' );
+INSERT INTO "service" ( "n_service","nom_service","telephone","type" ) VALUES ( '10','DIANA','0345993069','1' );
+INSERT INTO "service" ( "n_service","nom_service","telephone","type" ) VALUES ( '11','VAKINAKARATRA','0345993103','1' );
+INSERT INTO "service" ( "n_service","nom_service","telephone","type" ) VALUES ( '12','MELAKY','0345993960','1' );
+INSERT INTO "service" ( "n_service","nom_service","telephone","type" ) VALUES ( '13','ATSINANANA','0345994266','1' );
+INSERT INTO "service" ( "n_service","nom_service","telephone","type" ) VALUES ( '14','ANDROY','0345994964','1' );
+INSERT INTO "service" ( "n_service","nom_service","telephone","type" ) VALUES ( '15','SAVA','0345995362','1' );
+INSERT INTO "service" ( "n_service","nom_service","telephone","type" ) VALUES ( '16','ALAOTRA MANGORO','0345995405','1' );
+INSERT INTO "service" ( "n_service","nom_service","telephone","type" ) VALUES ( '17','SOFIA','0345996334','1' );
+INSERT INTO "service" ( "n_service","nom_service","telephone","type" ) VALUES ( '18','V7V','0346011567','1' );
+INSERT INTO "service" ( "n_service","nom_service","telephone","type" ) VALUES ( '19','BONGOLAVA','0346006103','1' );
+INSERT INTO "service" ( "n_service","nom_service","telephone","type" ) VALUES ( '20','HAUTE MATSIATRA','0346006026','1' );
+INSERT INTO "service" ( "n_service","nom_service","telephone","type" ) VALUES ( '21','ATSIMO ANDREFANA','0346005951','1' );
+INSERT INTO "sous_titre" ( "n_soustitre","sous_titre","n_titre" ) VALUES ( '1','vide','1' );
+INSERT INTO "sous_titre" ( "n_soustitre","sous_titre","n_titre" ) VALUES ( '2','vide','2' );
+INSERT INTO "sous_titre" ( "n_soustitre","sous_titre","n_titre" ) VALUES ( '3','A-Dossier concernant l�int�ress�','3' );
+INSERT INTO "sous_titre" ( "n_soustitre","sous_titre","n_titre" ) VALUES ( '4','B-Pi�ces justificatives de la disponibilit� des postes d�accueil','3' );
+INSERT INTO "sous_titre" ( "n_soustitre","sous_titre","n_titre" ) VALUES ( '5','Les m�mes pi�ces qu�en A et B ','4' );
+INSERT INTO "sous_titre" ( "n_soustitre","sous_titre","n_titre" ) VALUES ( '6','vide','5' );
+INSERT INTO "sous_titre" ( "n_soustitre","sous_titre","n_titre" ) VALUES ( '7','vide','6' );
+INSERT INTO "sous_titre" ( "n_soustitre","sous_titre","n_titre" ) VALUES ( '8','vide','7' );
+INSERT INTO "sous_titre" ( "n_soustitre","sous_titre","n_titre" ) VALUES ( '9','vide','8' );
+INSERT INTO "sous_titre" ( "n_soustitre","sous_titre","n_titre" ) VALUES ( '10','Dossier concernant l�int�ress�','9' );
+INSERT INTO "sous_titre" ( "n_soustitre","sous_titre","n_titre" ) VALUES ( '11','Pi�ces justificatives de la disponibilit� des postes d�accueil','9' );
+INSERT INTO "sous_titre" ( "n_soustitre","sous_titre","n_titre" ) VALUES ( '12','vide','10' );
+INSERT INTO "sous_titre" ( "n_soustitre","sous_titre","n_titre" ) VALUES ( '13','vide','11' );
+INSERT INTO "sous_titre" ( "n_soustitre","sous_titre","n_titre" ) VALUES ( '14','vide','12' );
+INSERT INTO "sous_titre" ( "n_soustitre","sous_titre","n_titre" ) VALUES ( '15','vide','13' );
+INSERT INTO "sous_titre" ( "n_soustitre","sous_titre","n_titre" ) VALUES ( '16','vide','14' );
+INSERT INTO "sous_titre" ( "n_soustitre","sous_titre","n_titre" ) VALUES ( '17','Si int�gration prononc�e avant l��ge de 60 ans','15' );
+INSERT INTO "sous_titre" ( "n_soustitre","sous_titre","n_titre" ) VALUES ( '18','Si int�gration prononc�e apr�s d�c�s ou l��ge de 60 ans : En sus, il y a','15' );
+INSERT INTO "sous_titre" ( "n_soustitre","sous_titre","n_titre" ) VALUES ( '19','vide','16' );
+INSERT INTO "sous_titre" ( "n_soustitre","sous_titre","n_titre" ) VALUES ( '20','vide','17' );
+INSERT INTO "sous_titre" ( "n_soustitre","sous_titre","n_titre" ) VALUES ( '21','vide','18' );
+INSERT INTO "titre" ( "n_titre","titre","n_typepiece","n_nature" ) VALUES ( '1','vide','1','1' );
+INSERT INTO "titre" ( "n_titre","titre","n_typepiece","n_nature" ) VALUES ( '2','vide','2','1' );
+INSERT INTO "titre" ( "n_titre","titre","n_typepiece","n_nature" ) VALUES ( '3','Nomination sur titre','1','2' );
+INSERT INTO "titre" ( "n_titre","titre","n_typepiece","n_nature" ) VALUES ( '4','Nomination � la suite d�un concours administratif avec ou sans formation
+initiale','1','2' );
+INSERT INTO "titre" ( "n_titre","titre","n_typepiece","n_nature" ) VALUES ( '5','vide','2','2' );
+INSERT INTO "titre" ( "n_titre","titre","n_typepiece","n_nature" ) VALUES ( '6','A-Dossier concernant l�int�ress�','1','3' );
+INSERT INTO "titre" ( "n_titre","titre","n_typepiece","n_nature" ) VALUES ( '7','B-Pi�ces justificatives de la disponibilit� des postes d�accuei','1','3' );
+INSERT INTO "titre" ( "n_titre","titre","n_typepiece","n_nature" ) VALUES ( '8','vide','2','3' );
+INSERT INTO "titre" ( "n_titre","titre","n_typepiece","n_nature" ) VALUES ( '9','vide','1','4' );
+INSERT INTO "titre" ( "n_titre","titre","n_typepiece","n_nature" ) VALUES ( '10','vide','2','4' );
+INSERT INTO "titre" ( "n_titre","titre","n_typepiece","n_nature" ) VALUES ( '11','vide','1','5' );
+INSERT INTO "titre" ( "n_titre","titre","n_typepiece","n_nature" ) VALUES ( '12','vide','2','5' );
+INSERT INTO "titre" ( "n_titre","titre","n_typepiece","n_nature" ) VALUES ( '13','vide','1','6' );
+INSERT INTO "titre" ( "n_titre","titre","n_typepiece","n_nature" ) VALUES ( '14','vide','2','6' );
+INSERT INTO "titre" ( "n_titre","titre","n_typepiece","n_nature" ) VALUES ( '15','vide','1','7' );
+INSERT INTO "titre" ( "n_titre","titre","n_typepiece","n_nature" ) VALUES ( '16','vide','2','7' );
+INSERT INTO "titre" ( "n_titre","titre","n_typepiece","n_nature" ) VALUES ( '17','vide','1','8' );
+INSERT INTO "titre" ( "n_titre","titre","n_typepiece","n_nature" ) VALUES ( '18','vde','2','8' );
+INSERT INTO "titre" ( "n_titre","titre","n_typepiece","n_nature" ) VALUES ( '19','vide','1','9' );
+INSERT INTO "titre" ( "n_titre","titre","n_typepiece","n_nature" ) VALUES ( '20','vide','2','9' );
+INSERT INTO "titre" ( "n_titre","titre","n_typepiece","n_nature" ) VALUES ( '21','vide','1','10' );
+INSERT INTO "typedocument" ( "n_typedocument","activite" ) VALUES ( '1','solde' );
+INSERT INTO "typedocument" ( "n_typedocument","activite" ) VALUES ( '2','pension' );
+INSERT INTO "typepiece" ( "n_typepiece","type_piece" ) VALUES ( '1','Pi�ces requises pour visa' );
+INSERT INTO "typepiece" ( "n_typepiece","type_piece" ) VALUES ( '2','Pi�ces Mandatement' );
+INSERT INTO "typepiece" ( "n_typepiece","type_piece" ) VALUES ( '3','vide' );
