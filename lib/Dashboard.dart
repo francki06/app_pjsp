@@ -218,10 +218,10 @@ class _DashboardState extends State<Dashboard> {
                     color: const Color(0x43afbe),
                   ),
                   child: Text(
-                    'DIRECTION GENERALE DES FINANCES ET DES AFFAIRES GENERALES \n DIRECTION DE LA SOLDE ET DES PENSIONS',
+                    'DIRECTION GENERALE DU BUDGET ET DES FINANCES \n DIRECTION DE LA SOLDE ET DES PENSIONS',
                     style: TextStyle(
                       fontFamily: 'Verdana',
-                      fontSize: 11,
+                      fontSize: 15,
                       color: const Color(0xffe5e5e5),
                     ),
                     textAlign: TextAlign.center,
